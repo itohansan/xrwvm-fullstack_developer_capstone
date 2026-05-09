@@ -5,7 +5,6 @@ from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-
 # CarMake Model
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
@@ -20,7 +19,7 @@ class CarModel(models.Model):
     car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)
     dealer_id = models.IntegerField()
     name = models.CharField(max_length=100)
-    
+
     CAR_TYPES = [
         ('SEDAN', 'Sedan'),
         ('SUV', 'SUV'),
@@ -37,13 +36,6 @@ class CarModel(models.Model):
 
     def __str__(self):
         return f"{self.car_make.name} - {self.name}"
-
-
-
-
-
-
-
 
 
 # Create your models here.

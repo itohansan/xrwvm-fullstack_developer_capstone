@@ -49,6 +49,7 @@ const PostReview = () => {
 
     console.log(jsoninput);
     const res = await fetch(review_url, {
+    //   credentials: "include",
       method: "POST",
       headers: {
           "Content-Type": "application/json",
